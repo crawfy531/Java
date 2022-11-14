@@ -1,12 +1,14 @@
 import java.util.Scanner;
-
+// this class is used to interact with the user
 public class Interface {
     public Interface(){
 
     }
+    // displays message to the user
     public void displayMesssage(String message){
         System.out.println(message);
     }
+    // gathers input from the user
     public char userInput(String prompt){
         Scanner input = new Scanner(System.in);
         System.out.println(prompt);
@@ -14,6 +16,8 @@ public class Interface {
         return userinput;
 
     }
+    // displays the game board for a set size
+    // displays where player(X) and villan(V) are but not the treasure
     public void displayBord(int x, int y, int vx, int vy){
         int p = 4;
         for (int j = 0; j<5; j++){

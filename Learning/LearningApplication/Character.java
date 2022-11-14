@@ -1,10 +1,16 @@
 
 
+// this creates a character that the player controls
+// inherits from item class
 public class Character extends Item {
     
     public Character(){
+        // initalized start player position
         setPosition(2, 2);;
     }
+    // receives input from the user
+    // checks to see if input is valid
+    // moves player position based off of input
     public void makeMove(){
         Interface myinterface = new Interface();
         char choice = myinterface.userInput("please enter an \"a\" (left), \"s\" (down), \"d\" (right), or \"w\" (up)");
@@ -25,6 +31,7 @@ public class Character extends Item {
             }
             convertMove(choice);
     }
+    // based on the input, either the X position or Y position changes
     public void convertMove(char input){
         switch(input){
             case 'a':

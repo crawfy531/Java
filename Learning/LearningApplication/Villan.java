@@ -1,7 +1,11 @@
+
+// this is a villan class that inherits the character class
 public class Villan extends Character{
     public Villan(){
         setPosition(randomInt(0, 5), randomInt(0, 4));
     }
+    // moves the villan in a random direction (one space)
+    // makes sure the direction is valid
     public void makeMove(){
             boolean wrongInput = true;
             char choice = randomMove();
@@ -21,6 +25,7 @@ public class Villan extends Character{
             }
             convertMove(choice);
     }
+    // generates a random direction
     public char randomMove(){
         int move = randomInt(0, 4);
         char input = 'w';
